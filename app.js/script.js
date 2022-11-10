@@ -1,17 +1,14 @@
 const btnhamburger = document.querySelector("#hamburger");
 const header = document.querySelector(".header");
-const body = document.getElementsByTagName("body");
 
 btnhamburger.addEventListener('click', () => {
   console.log('Open Hamburger');
 
   if (header.classList.contains('open')) {
     header.classList.remove('open'); // Close Hamburger
-    body.classList.add('lock_scroll');
   }
   else {
     header.classList.add('open'); // Open Hamburger
-    body.classList.remove('lock_scroll');
   }
 });
 
@@ -43,7 +40,7 @@ minus.addEventListener('click', () => {
 
 
 // Script for Main image slider
-const imageSlider = ["../images/image-product-2.jpg", "../images/image-product-3.jpg", "../images/image-product-4.jpg", "../images/image-product-1.jpg"];
+const imageSlider = ["../images/image-product-1.jpg", "../images/image-product-2.jpg", "../images/image-product-3.jpg", "../images/image-product-4.jpg"];
 
 const bg = document.querySelector('.main_image_mobile');
 const next = document.querySelector(".next");
