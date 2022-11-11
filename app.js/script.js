@@ -18,6 +18,7 @@ btnhamburger.addEventListener('click', () => {
 const plus = document.querySelector(".plus");
 const number = document.querySelector(".number");
 const minus = document.querySelector(".minus");
+const price = document.querySelector(".price")
 
 let a = 0;
 
@@ -30,12 +31,42 @@ plus.addEventListener('click', () => {
 
 minus.addEventListener('click', () => {
   console.log('Remove Product');
-  if(a > 0){
+  if(a > 1){
 
     a--;
     number.innerText = a;
   }
   
+});
+
+
+// Change Thumbnail Image to Main Image
+
+const main = document.getElementById("main");
+const thumbnail = document.getElementsByClassName("thumbnail");
+
+thumbnail[0].addEventListener('click', () => {
+  console.log('Make Thumbnail Main Image');
+
+  main.src = thumbnail[0].src;
+});
+
+thumbnail[1].addEventListener('click', () => {
+  console.log('Make Thumbnail Main Image');
+
+  main.src = thumbnail[1].src;
+});
+
+thumbnail[2].addEventListener('click', () => {
+  console.log('Make Thumbnail Main Image');
+
+  main.src = thumbnail[2].src;
+});
+
+thumbnail[3].addEventListener('click', () => {
+  console.log('Make Thumbnail Main Image');
+
+  main.src = thumbnail[3].src;
 });
 
 
