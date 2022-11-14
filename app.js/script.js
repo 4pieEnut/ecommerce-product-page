@@ -83,13 +83,28 @@ next.addEventListener('click', () => {
   console.log('Next Image');
   
   currentImage ++;
-  bg.style.background = imageSlider[currentImage];
+  bg.src = imageSlider[currentImage].src;
 });
 
 prev.addEventListener('click', () => {
   console.log('Previous Image');
 
   currentImage --;
-  bg.style.background = imageSlider[currentImage];
+  bg.src = imageSlider[currentImage].src;
 });
 
+// cart content  display script
+
+cart = document.querySelector("#cart");
+content = document.querySelector(".main_cart");
+
+cart.addEventListener('click', () => {
+  console.log('Open Cart');
+
+  if(content.classList.contains('open_cart')){
+    content.classList.remove('open_cart');
+  }
+  else {
+    content.classList.add('open_cart');
+  }
+});
