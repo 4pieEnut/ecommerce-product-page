@@ -95,8 +95,8 @@ prev.addEventListener('click', () => {
 
 // cart content  display script
 
-cart = document.querySelector("#cart");
-content = document.querySelector(".main_cart");
+const cart = document.querySelector("#cart");
+const content = document.querySelector(".main_cart");
 
 cart.addEventListener('click', () => {
   console.log('Open Cart');
