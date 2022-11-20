@@ -104,28 +104,24 @@
     }
 
     a {
+      position: relative;
       font-size: 0.875rem;
       font-weight: 500;
       color: $darkGrayishBlue;
 
       &:hover {
         color: $veryDarkBlue;
-      }
+      } 
 
-      &::after { 
+      &:hover::after { 
         position: absolute;
         display: block;
         content: "";
-        width: 100%;
         height: 0.235rem;
         right: 0;
         bottom: -4.2rem;
         left: 0;
-        background-color: transparent;
-
-        &:hover {
-          background-color: $orange;
-        }
+        background-color: $orange;
       }
     }
   }
@@ -143,7 +139,7 @@
     &_cart {
       cursor: pointer;
 
-      i {
+      img {
         width: 1.375rem;
         height: 1.25rem;
       }
@@ -184,6 +180,7 @@
     left: -100%;
     background-color: $white;
     z-index: 2;
+    transition: all 0.3s ease-in-out;
     
     a {
       font-size: 0.875rem;
@@ -203,16 +200,10 @@
     left: 0;
     background-color: $overlay;
     z-index: 1;
+    transition: all 0.3s ease-in-out;
 
     @include breakpoint-up(medium) {
       display: none;
     }
-  }
-}
-
-.open_cart {
-
-  .main_cart {
-    display: flex;
   }
 }

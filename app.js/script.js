@@ -71,32 +71,48 @@ thumbnail[3].addEventListener('click', () => {
 
 
 // Script for Main image slider
-const imageSlider = ["../images/image-product-1.jpg", "../images/image-product-2.jpg", "../images/image-product-3.jpg", "../images/image-product-4.jpg"];
+let productIndex = 1;
+productSlides(slideIndex);
 
-const bg = document.querySelector('.main_image_mobile');
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
+// Next/previous controls
+function addSlides(n) {
+  productSlides(slideIndex += n);
+}
 
-let currentImage = 0;
-
-next.addEventListener('click', () => {
-  console.log('Next Image');
-  
-  currentImage ++;
-  bg.src = imageSlider[currentImage].src;
-});
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 
 prev.addEventListener('click', () => {
-  console.log('Previous Image');
-
-  currentImage --;
-  bg.src = imageSlider[currentImage].src;
+  addSlides(-1);
 });
+
+next.addEventListener('click', () => {
+  addSlides(1);
+});
+
+function productSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("product");
+
+  if (n > slides.length) {
+    productIndex = 1
+  }
+
+  if (n < 1) {
+    productIndex = slides.length
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+  slides[productIndex-1].style.display = "block";
+}
 
 // cart content  display script
 
-cart = document.querySelector("#cart");
-content = document.querySelector(".main_cart");
+const cart = document.querySelector("#cart");
+const content = document.querySelector(".main_cart");
 
 cart.addEventListener('click', () => {
   console.log('Open Cart');
