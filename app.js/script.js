@@ -70,43 +70,43 @@ thumbnail[3].addEventListener('click', () => {
 });
 
 
-// Script for Main image slider
-let productIndex = 1;
-productSlides(slideIndex);
+// Script for Main image
+let slideIndex = 1;
+showSlides(slideIndex);
 
 // Next/previous controls
-function addSlides(n) {
-  productSlides(slideIndex += n);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
 prev.addEventListener('click', () => {
-  addSlides(-1);
+  plusSlides(-1);
 });
 
 next.addEventListener('click', () => {
-  addSlides(1);
+  plusSlides(1);
 });
 
-function productSlides(n) {
+function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("product");
 
   if (n > slides.length) {
-    productIndex = 1
+    slideIndex = 1
   }
 
   if (n < 1) {
-    productIndex = slides.length
+    slideIndex = slides.length
   }
 
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   
-  slides[productIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "block";
 }
 
 // cart content  display script
