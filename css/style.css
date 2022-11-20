@@ -275,6 +275,7 @@ body {
   border-radius: 5rem;
   margin-left: 1rem;
   cursor: pointer;
+  user-select: none;
 }
 .main_image_mobile_prev:hover {
   background-color: hsl(25deg, 100%, 94%);
@@ -295,6 +296,7 @@ body {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 5rem;
   cursor: pointer;
+  user-select: none;
 }
 .main_image_mobile_next:hover {
   background-color: hsl(25deg, 100%, 94%);

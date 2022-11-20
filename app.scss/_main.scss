@@ -88,6 +88,7 @@
       border-radius: 5rem;
       margin-left: 1rem;
       cursor: pointer;
+      user-select: none;
 
       &:hover {
         background-color: $paleOrange;
@@ -111,6 +112,7 @@
       background-color: $white;
       border-radius: 5rem;
       cursor: pointer;
+      user-select: none;
 
       &:hover {
         background-color: $paleOrange;
